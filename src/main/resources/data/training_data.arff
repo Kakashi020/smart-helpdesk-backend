@@ -1,0 +1,37 @@
+@RELATION ticket_priority_classification
+
+@ATTRIBUTE ticket_text string
+@ATTRIBUTE priority_category {Critical_Hardware, Critical_Software, Critical_Logistics, High_Hardware, High_Software, High_Logistics, Medium_Hardware, Medium_Software, Medium_Logistics, Low_Hardware, Low_Software, Low_Logistics}
+
+@DATA
+% --- 1. CRITICAL (Safety Hazards / Total Outage) ---
+"motherboard failure burned permanent hardware damage gpu failure stick drift dead pixels smoking leaking liquid short circuit", Critical_Hardware
+"battery swelling exploding sparks fire hazard power supply unit pop smell burning components total blackout", Critical_Hardware
+"bios update failure windows crashed boot loop kernel panic bricked unrecoverable system error blue screen of death", Critical_Software
+"malware ransomware encryption security breach unauthorized access remote control ghost typing firewall bypassed", Critical_Software
+"received empty box stolen package replaced dummy unit brick inside rocks instead of laptop tampered seal broken", Critical_Logistics
+"fraudulent agent delivery scan scam company refusing refund identity theft credit card used without permission", Critical_Logistics
+
+% --- 2. HIGH (Major Dysfunction / Significant Financial Loss) ---
+"screen flickering horizontal lines display distorted gpu artifacting vertical bars touchscreen not responding ghost touches", High_Hardware
+"hard drive clicking sounds data corruption psu making loud whining noise overheating reaching 100 degrees Celsius", High_Hardware
+"operating system freezing every five minutes driver conflict causing system hang registry error blue screen loop", High_Software
+"facial recognition login not working fingerprint scanner failed to authenticate secure folder locked inaccessible", High_Software
+"wrong product received ordered laptop got a toaster package arrived shattered glass broken screen damage during shipping", High_Logistics
+"double charged for same order refund not received after 14 days payment deducted but order history showing empty", High_Logistics
+
+% --- 3. MEDIUM (Functional Limitations / Performance Issues) ---
+"laptop fan making grinding noise battery drain fast speaker sound muffled charging very slow 5 hours to full", Medium_Hardware
+"joystick drift gpu thermal throttling monitor stand wobbles mic sound has static background noise muffled voice", Medium_Hardware
+"bluetooth latency wifi signal drops frequently touchpad multi touch not working system runs slowly mouse cursor jumping", Medium_Software
+"app freezes when opening keyboard rgb lights not syncing software update stuck at 99 percent notification delay", Medium_Software
+"replacement delayed by courier tracking number not updating for 3 days return pickup rescheduled twice by agent", Medium_Logistics
+"damaged packaging box outer seal intact but internal contents missing accessories cables not included in box", Medium_Logistics
+
+% --- 4. LOW (Aesthetic Issues / Minor Inconveniences) ---
+"cheap plastic used scratches and dents matte finish shows fingerprints keyboard keys feel mushy font looks ugly", Low_Hardware
+"internal screws loose ear cushions uncomfortable power cord is too short brand logo is crooked bulky heavy", Low_Hardware
+"installed bloatware apps font size too small spell check underlines everything user interface is confusing cluttered", Low_Software
+"software glitches minor app icon looks weird default ringtones are bad wallpaper resets every time I reboot", Low_Software
+"packaging peanuts made a mess delivery agent was rude shipping label was faded tracking number has a typo", Low_Logistics
+"no return policy found on website user manual missing microscopic text on box instructions not clear", Low_Logistics
